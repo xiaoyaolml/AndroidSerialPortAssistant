@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">安卓串口助手</string>
+    <string name="default_baudrate">115200</string>
+</resources>

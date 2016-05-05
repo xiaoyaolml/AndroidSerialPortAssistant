@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title=" 串口设置">
+
+    <PreferenceCategory android:title="串口设置">
+        <ListPreference
+            android:key="DEVICE"
+            android:title="串口选择"
+            android:dialogTitle="请选择串口"/>
+
+        <ListPreference
+            android:key="BAUDRATE"
+            android:title="波特率"
+            android:dialogTitle="请选择波特率"
+            android:entries="@array/baudrates_name"
+            android:entryValues="@array/baudrates_value"
+            android:defaultValue="@string/default_baudrate"/>
+
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="SETTING_RECV"
+        android:title="接收设置">
+        <CheckBoxPreference
+            android:key="CONTENT_RECV"
+            android:title="接收内容"
+            android:summaryOn="HEX"
+            android:summaryOff="ASCII"/>
+        <CheckBoxPreference
+            android:key="TIME"
+            android:title="时间戳"
+            android:summaryOn="显示"
+            android:summaryOff="不显示"/>
+        <CheckBoxPreference
+            android:key="SHOW"
+            android:title="显示发送"
+            android:summaryOn="显示"
+            android:summaryOff="不显示"/>
+        <CheckBoxPreference
+            android:key="ENTER"
+            android:title="自动换行"
+            android:summaryOn="是"
+            android:summaryOff="否"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="SETTING_SEND"
+        android:title="发送设置">
+        <CheckBoxPreference
+            android:key="CONTENT_SEND"
+            android:title="发送内容"
+            android:summaryOn="HEX"
+            android:summaryOff="ASCII"/>
+        <CheckBoxPreference
+            android:key="AUTO_SEND"
+            android:title="自动发送"/>
+        <EditTextPreference
+            android:key="AUTO_SEND_TIME"
+            android:title="自动发送时间(ms)"
+            android:defaultValue="1000"/>
+    </PreferenceScreen>
+
+</PreferenceScreen>
